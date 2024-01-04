@@ -60,7 +60,7 @@
 
 <nav class="px-4 md:px-10 flex items-center border-b-2 h-[4rem]" id="navbar">
 	<NavBrand href={ROUTES.HOME}>
-		<img src={logo} class="mr-3 h-6 sm:h-9" alt="Krello Logo" />
+		<img src={logo} class="mr-3 h-6 sm:h-5" alt="Krello Logo" />
 	</NavBrand>
 
 	{#if showBoardNameInNav && currentBoardName}

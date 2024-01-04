@@ -114,7 +114,7 @@
 
 <section
 	class={classNames({
-		'border-2 border-slate-300 rounded-lg bg-slate-200': true,
+		'border-2 border-slate-300 rounded-lg bg-slate-200 md:w-1/5': true, // ! set w-1/5 dynamic to the number of cols
 		'border-2 border-primary-600': isCurrentColumnHighlighted,
 	})}
 	on:drop={handleDrop}
@@ -130,7 +130,7 @@
 		</p>
 	</div>
 
-	<div class="column overflow-y-auto w-full flex flex-1 flex-col items-center gap-y-6 p-2 px-4">
+	<div class="column overflow-y-auto flex flex-col items-center gap-y-4 p-2 px-4">
 		{#each tasks as task}
 			<div
 				id={task.id}
@@ -176,13 +176,13 @@
 
 <style lang="scss">
 	.column {
-		height: calc(100vh - 16rem);
-		@media screen and (max-width: 1400px) {
-			width: 350px;
-		}
-		@media screen and (min-width: 1400px) {
-			width: 400px;
-		}
+		height: calc(100vh - 18rem);
+		width: 100%;
+
+		// Linear scaling for medium screens
+		// @media screen and (max-width: 1400px) {
+		//     width: calc(25px + 10vw);
+		// }
 
 		&::-webkit-scrollbar {
 			width: 10px;

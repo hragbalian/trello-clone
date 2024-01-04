@@ -170,6 +170,6 @@
 
 <style>
 	.board-page {
-		height: calc(100vh - 4rem);
+		height: calc(100vh - 6rem);
 	}
 </style>

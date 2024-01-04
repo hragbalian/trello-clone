@@ -14,8 +14,8 @@
 </script>
 
 {#if kanbanData}
-	<section class="wrapper flex flex-1 w-screen">
-		<div class="flex gap-2 ml-10 flex-1 rounded-lg">
+	<section class="wrapper flex">
+		<div class="flex w-full ml-10 flex-col gap-4 md:flex-row rounded-lg border-4">
 			{#each Object.entries(kanbanData) as [columnId, entry]}
 				<Column title={entry.columnName} tasks={entry.tasks} {columnId} />
 			{/each}
@@ -26,6 +26,8 @@
 <style lang="scss">
 	.wrapper {
 		height: calc(100vh - 9rem);
+		// width:100%
 		overflow-x: auto;
+		// width: calc(100vw - 1vw);
 	}
 </style>
